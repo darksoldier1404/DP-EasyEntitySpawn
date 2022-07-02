@@ -8,6 +8,7 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryCloseEvent;
 
 public class DEESEvent implements Listener {
 
@@ -34,6 +35,13 @@ public class DEESEvent implements Listener {
                     }
                 }
             }
+        }
+    }
+
+    @EventHandler
+    public void onCloseInventory(InventoryCloseEvent e) {
+        if(DEESFunction.currentInv.containsKey(e.getPlayer().getUniqueId())) {
+            DEESFunction.currentInv.remove(e.getPlayer().getUniqueId());
         }
     }
 }
