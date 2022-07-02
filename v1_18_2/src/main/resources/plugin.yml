@@ -2,7 +2,7 @@ name: DP-EasyEntitySpawn
 version: 1.0.0.0
 main: com.darksoldier1404.dees.EasyEntitySpawn
 authors: [ DEAD_POOLIO_ ]
-api-version: 1.19
+api-version: 1.18
 depend:
   - DPP-Core
 commands:
